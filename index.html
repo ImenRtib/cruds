@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="refresh" content="1777">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+
+    <link id="stylesheet" rel="stylesheet" href="light.css">
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>CRUDs</h2>
+            <p>Create Read Update Delete Search</p>
+        </header>
+    
+        <div class="inputs">
+            <input type="text" id="title" placeholder="Title">
+            <div>
+                <input onkeyup="getTotal()" type="number" id="price" placeholder="Price">
+                <input onkeyup="getTotal()"  type="number" id="taxes" placeholder="Taxes">
+                <input onkeyup="getTotal()" type="number" id="ads" placeholder="Ads">
+                <input onkeyup="getTotal()" type="number" id="discount" placeholder="Discount">
+                <div id="total">Total: 0</div>
+            </div>
+            <input type="number" id="count" placeholder="Count">
+            <input type="text" id="category" placeholder="Category">
+            <button id="submit" onclick="create()">Create</button>
+        </div>
+    
+        <div class="outputs">
+            <div class="searchblock">
+                <input type="text" id="search" placeholder="Search" onkeyup="returning(this.value)">
+                <div class="btnsearch">
+                    <button onclick="searching1()">Search by Title</button>
+                    <button onclick="searching2()">Search by Category</button>
+                </div>
+            </div>
+            <div id="btnDelete"></div>
+            <div id="cc"> <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Price</th>
+                        <th>Taxes</th>
+                        <th>Ads</th>
+                        <th>Discount</th>
+                        <th>Total</th>
+                        <th>Category</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    
+                    <!-- More rows as needed -->
+                </tbody>
+            </table> </div>
+            <div id="no"></div>
+        </div>
+    </div>
+
+    <img id="toggleIcon" src="moon.png"  style="cursor: pointer; position: absolute ;top:0; right: 0;width: 50px; height: 50px; margin: 25px;" >
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    <script src="cruds.js"></script>
+</body>
+</html>
